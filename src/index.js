@@ -5,8 +5,7 @@ const mysteries = [
 ];
 
 function currentDay() {
-  //Temporarily hardcode start to Ash Wednesday, 2017
-  const ashWeds = moment("2017-03-01");
+  const ashWeds = moment().easter().subtract(46, 'days');
   const today = moment();
   const dayIndex = today.diff(ashWeds, 'days') // 0
   return dayIndex;
