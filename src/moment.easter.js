@@ -1,12 +1,5 @@
 'use strict';
 
-var moment;
-if (require !== undefined) {
-    moment = require('moment');
-} else {
-    moment = this.moment;
-}
-
 // I found this algorithm on
 // http://www.merlyn.demon.co.uk/estralgs.txt
 //
@@ -99,9 +92,3 @@ moment.easter = function Easter20ops(year) {
 moment.fn.easter = function () {
     return moment.easter(this.year());
 };
-
-if (module !== undefined) {
-    module.exports = moment;
-} else {
-    this.moment = moment;
-}
