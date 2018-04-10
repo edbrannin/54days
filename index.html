@@ -16,7 +16,7 @@ mysteries = {{ site.data.mysteries | jsonify }};
 &nbsp;
 </div>
 
-<ol id="toc" class="nav nav-pills nav-fill" role="tablist">
+<ol id="toc" class="nav nav-pills nav-fill d-flex flex-wrap" role="tablist">
   {% for item in site.data.mysteries %}
   {% assign category = item[0] %}
   <li class="nav-item">
